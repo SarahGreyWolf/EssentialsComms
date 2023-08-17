@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyTitle>EssentialComms</AssemblyTitle>
+		<Authors>sarahgreywolf</Authors>
+		<Version>0.0.1</Version>
+		
+		<Description>Vintage Story mod which adds a variety of commands intended for multiplayer.</Description>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>D:/Games/Vintagestory/VintagestoryAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <Target Name="Copy" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="D:/Games/Vintagestory/Mods/essentialcomms" />
+    <Copy SourceFiles="$(TargetDir)/$(TargetName).pdb" DestinationFolder="D:/Games/Vintagestory/Mods/essentialcomms" />
+  </Target>
+</Project>

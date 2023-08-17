@@ -1,0 +1,12 @@
+{
+    "type": "code",
+    "modid": "essentialcomms",
+    "name": "Essential Comms",
+    "authors": ["SarahGreyWolf <m.sarahgreywolf@outlook.com>"],
+    "requiredOnClient": false,
+    "description": "A set of Commands intended for use by servers",
+    "version": "1.0.0",
+    "dependency": {
+      "game": ""
+    }
+  }
